@@ -19,6 +19,19 @@ function buttons(){
 
 buttons();
 
+// button for the submit input
+$("#submit").on("click", function(event){
+    // stop submit button from doing whatever it does
+    event.preventDefault();
+    // get a movie from the user
+    var userMovie = $("#add-item").val().trim();
+    // push that movie to the topics array
+    console.log(userMovie);
+    // console.log($("topics").push(userMovie))
+    // run the button function to add the item. 
+    // buttons();
+});
+
 
 // create an onclick that calls the buttons and everything else
 $(".movie-button").on("click", function(){
@@ -33,20 +46,6 @@ movieTopics + "&api_key=Oek1NkJPgKEtBktiKcsXU9MBfSUNjAG1&limit=10";
 
 console.log(movieTopics);
 console.log(queryURL);
-
-// button for the submit input
-$("#submit").on("click", function(event){
-    // stop submit button from doing whatever it does
-    event.preventDefault();
-    // get a movie from the user
-    var userMovie = $("#add-item").val().trim();
-    // push that movie to the topics array
-    console.log(userMovie);
-    // console.log($("topics").push(userMovie))
-    // run the button function to add the item. 
-    // buttons();
-});
-
 
 // getting the api content from giphy
 $.ajax({

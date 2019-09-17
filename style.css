@@ -1,17 +1,32 @@
 body {
     background-image: url("https://i.imgur.com/lMXMoyW.jpg");
     /* background-image: url("blade-runner-2049_d1f7_2880x1800.jpg") */
+    /* background-repeat: repeat-y; */
 }
 .navbar {
     margin-top: 10px;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .btn {
-    margin: 2px;
+    margin: 5px 2px;
+}
+
+.main-content {
+    position: absolute;
+    width: 1140px;
+   
+}
+
+.gifBox {
+    float: left;
+    padding: 10px;
 }
 
 img {
    position: relative;
+   float: left;
 }
 
 p {

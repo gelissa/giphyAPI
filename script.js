@@ -69,7 +69,7 @@ function newMovieName(){
     // there is loop that creates a button for each array item
     for (var i = 0; i < results.length; i++){
         // dynamically make the div for the gifs
-        var movieDiv = $("<div>");
+        var movieDiv = $("<div class='gifBox'>");
 
         // rating variable
         var rating = results[i].rating;

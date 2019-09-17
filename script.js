@@ -71,14 +71,14 @@ function newMovieName(){
 
         // rating variable
         var rating = results[i].rating;
-        var p = $("<p>").text("Ratings: " + rating);
+        var p = $("<p>").text("Rating: " + rating);
         console.log(rating);
 
         // the img tag for the gifs
         var movieImage = $("<img>");
 
         movieImage.attr("src", results[i].images.fixed_height.url);
-        movieImage.prepend(p);
+        movieDiv.prepend(p);
         movieDiv.prepend(movieImage);
 
         $(".main-content").prepend(movieDiv);

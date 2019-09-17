@@ -4,6 +4,8 @@
 var topics = ["Inception", "IT", "Annihilation", "Titanic", "The+Dark+Knight", "Spiderman", "Mission Impossible", "Black Panther", "Endgame"];
 
 function buttons(){
+    $(".button-items").empty();
+
     for(var i = 0; i < topics.length; i++){
         var btn  = $("<button>");
         // give the  button a class 
@@ -17,7 +19,7 @@ function buttons(){
     }
 };
 
-buttons();
+
 
 // button for the submit input
 $("#submit").on("click", function(event){
@@ -26,12 +28,17 @@ $("#submit").on("click", function(event){
     // get a movie from the user
     var userMovie = $("#add-item").val().trim();
     // push that movie to the topics array
-    console.log(userMovie);
-    // console.log($("topics").push(userMovie))
+    // console.log(userMovie);
+    topics.push(userMovie);
+
+    // call the function!!!
+    buttons();
+    // make a button from the user input
     // run the button function to add the item. 
-    // buttons();
+    // $(".button-items").append(userMovie);
 });
 
+buttons();
 
 // create an onclick that calls the buttons and everything else
 $(".movie-button").on("click", function(){

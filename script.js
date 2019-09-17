@@ -20,7 +20,6 @@ function buttons(){
 };
 
 
-
 // button for the submit input
 $("#submit").on("click", function(event){
     // stop submit button from doing whatever it does
@@ -38,27 +37,28 @@ $("#submit").on("click", function(event){
     // $(".button-items").append(userMovie);
 });
 
-buttons();
 
 // create an onclick that calls the buttons and everything else
-$(".movie-button").on("click", function(){
+function newMovieName(){
 
-console.log("Clicked on one")
-// allows me to grab the info form the data-movie which should align with it's own value (it's name)
-var movieTopics = $(this).attr("data-movie");
+    // $(".movie-button").on("click", function(){
 
-// starts the GIPHY call
-var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-movieTopics + "&api_key=Oek1NkJPgKEtBktiKcsXU9MBfSUNjAG1&limit=10";
+    console.log("Clicked on one")
+    // allows me to grab the info form the data-movie which should align with it's own value (it's name)
+    var movieTopics = $(this).attr("data-movie");
 
-console.log(movieTopics);
-console.log(queryURL);
+    // starts the GIPHY call
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+    movieTopics + "&api_key=Oek1NkJPgKEtBktiKcsXU9MBfSUNjAG1&limit=10";
 
-// getting the api content from giphy
-$.ajax({
+    console.log(movieTopics);
+    console.log(queryURL);
+
+    // getting the api content from giphy
+    $.ajax({
     url: queryURL,
     method: "GET",
-}).then(function(response) {
+    }).then(function(response) {
     console.log(response);
 
     // make a results variable to hold the response information
@@ -72,6 +72,7 @@ $.ajax({
         // rating variable
         var rating = results[i].rating;
         var p = $("<p>").text("Ratings: " + rating);
+        console.log(rating);
 
         // the img tag for the gifs
         var movieImage = $("<img>");
@@ -83,7 +84,11 @@ $.ajax({
         $(".main-content").prepend(movieDiv);
     }
 })
-});
+// })
+};
 
+$(document).on('click', ".movie-button", newMovieName);
+
+buttons();
 
 // the page will grab 10 gifs from giphy

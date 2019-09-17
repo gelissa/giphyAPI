@@ -1,15 +1,16 @@
 // an array of movies that the submit button pushes into
 // the variable is called topics
 
-var topics = ["Inception", "IT", "Annihilation", "Titanic", "The+Dark+Knight", "Spiderman", "Mission Impossible", "Black Panther", "Endgame"];
+var topics = ["Inception", "IT", "Annihilation", "Titanic", "The Dark Knight", "Spiderman", "Mission Impossible", "Black Panther", "Endgame"];
 
+// makes each button for the array items
 function buttons(){
     $(".button-items").empty();
 
     for(var i = 0; i < topics.length; i++){
         var btn  = $("<button>");
         // give the  button a class 
-        btn.addClass("movie-button");
+        btn.addClass("movie-button btn btn-secondary");
         //then target the button with the class
         btn.attr("data-movie", topics[i]);
         // var movieName = 
@@ -34,7 +35,8 @@ $("#submit").on("click", function(event){
     buttons();
     // make a button from the user input
     // run the button function to add the item. 
-    // $(".button-items").append(userMovie);
+    // clear input
+    // prevent button from adding empty values
 });
 
 

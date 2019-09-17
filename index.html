@@ -5,8 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Movie Gif Finder</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- PERSONAL CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
@@ -16,35 +24,47 @@
 
     <!-- page wrapper to control the size of the page -->
     <div class="wrapper">
-    
-    <!-- title for the page -->
-    <header>
+
+        <!-- title for the page -->
+        <!-- <header>
         Welcome to the Movies!
-    </header>
+    </header> -->
 
-    <!-- input to add an animal button to the page -->
-    <input type="text" name="textbox" id="add-item">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand">Welcome to the Movies!</a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" id="add-item"
+                    aria-label="Search">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" value="submit"
+                    id="submit">Search</button>
+            </form>
+        </nav>
 
-    <!-- submit button -->
-    <input type="submit" value="submit" id="submit">
+        <!-- input to add an animal button to the page -->
+        <!-- <input type="text" name="textbox" id="add-item"> -->
 
-    <!-- div for the buttons (maybe a sidebar?) -->
-    <aside>
-        <span class="button-items"></span>
-    </aside> 
+        <!-- submit button -->
+        <!-- <input type="submit" value="submit" id="submit"> -->
 
-    <!-- each gif will include it's rating attached to it.  -->
+        <!-- div for the buttons (maybe a sidebar?) -->
+        <div class="btn-group-vertical">
+            <span class="button-items"></span>
+        </div>
 
-    <!-- div for the actual gifs to populate into -->
-    <div class="main-content"></div>
+        <!-- each gif will include it's rating attached to it.  -->
 
-   
+        <!-- div for the actual gifs to populate into -->
+        <div class="container">
+            <!-- Content here -->
+            <div class="main-content"></div>
+        </div>
+
 
 
 
     </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

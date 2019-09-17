@@ -1,7 +1,20 @@
+body {
+    background-image: url("https://i.imgur.com/lMXMoyW.jpg");
+    /* background-image: url("blade-runner-2049_d1f7_2880x1800.jpg") */
+}
+.navbar {
+    margin-top: 10px;
+}
+
 .btn {
     margin: 2px;
 }
 
 img {
    position: relative;
+}
+
+p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
